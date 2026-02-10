@@ -1,4 +1,4 @@
-# 👋 Hola, soy [Tu Nombre]
+# 👋 Hola, soy [Sergio Bernardo Quintana García]
 
 🎓 **Ingeniero en Mecatrónica**  
 📍 6º semestre – Tecnológico de Monterrey, Campus Santa Fe  
