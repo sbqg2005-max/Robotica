@@ -28,7 +28,7 @@ Soy estudiante de ingeniería con interés en el diseño, automatización y desa
 
 ## 📫 Contacto
 
-- 📧 Email: [tuemail@ejemplo.com]  
+- 📧 Email: [A01785701@ tec.mc]  
 - 💼 LinkedIn: [linkedin.com/in/tuusuario]  
 
 ---
