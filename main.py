@@ -1,27 +1,56 @@
-import math
+import roboticstoolbox as rtb
+import numpy as np
+import matplotlib.pyplot as plt
 
-def area_esfera(radio):
-    """
-    Calcula el área de una esfera.
-    
-    Fórmula: A = 4πr²
-    
-    Args:
-        radio: El radio de la esfera
-        
-    Returns:
-        El área de la esfera
-    """
-    if radio < 0:
-        raise ValueError("El radio no puede ser negativo")
-    
-    area = 4 * math.pi * (radio ** 2)
-    return area
+from spatialmath import *
+from spatialmath.base import *      
 
+from sympy import Symbol, Matrix
 
-if __name__ == "__main__":
-    # Ejemplo de uso
-    radio = 5
-    resultado = area_esfera(radio)
-    print(f"Radio: {radio}")
-    print(f"Área de la esfera: {resultado:.2f}")
+#theta = Symbol('theta')
+#R = Matrix(rot2(theta))
+#print(R)
+
+theta_deg = 30
+theta_rad = np.deg2rad(theta_deg)
+
+R = rot2(theta_rad)
+print(R)
+
+trplot2(R) #dibujamos en el plot
+
+plt.axis('equal')
+plt.grid(True)
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("Rotación 2D")
+plt.show() #Mostrar ventana
+
+# Convertir grados a radianes
+theta_deg = 30
+theta_rad = np.deg2rad(theta_deg)
+
+R = rot2(theta_rad)
+print(R)    
+
+R2 = rot2(-theta_rad)
+print(R2)
+
+# Convertir grados a radianes
+theta_deg = 0
+theta_rad = np.deg2rad(theta_deg)
+
+T0 = transl2(0, 0) #Referencia
+trplot2(T0, frame="0", color="k") 
+
+#Traslación de 2,2 seguida de
+TA = transl2(1, 2)
+print(TA)
+trplot2(TA, frame="A", color="b") 
+
+plt.axis('equal')
+plt.grid(True)
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("Transformación 2D")
+plt.show() #Mostrar ventana
